@@ -94,7 +94,7 @@ public class PublicResources {
 		}
 		return Response.status(HttpStatus.SC_OK).entity(props.toString()).build();
 	}
-
+/*
 	private List<String> getActiveModules() {
         String dirPath = Config.DOCUMENTS_STORAGE_GESTION + "/BauhausActiveModules.txt";
         File file = new File(dirPath);
@@ -105,6 +105,18 @@ public class PublicResources {
 			return new ArrayList<>();
 		} 
 	}
+*/
+
+			private List<String> getActiveModules() {
+			ArrayList<String> str = new ArrayList<String>();
+				str.add("concepts");
+				str.add("classifications");
+				str.add("operations");
+				str.add("structures");
+				str.add("habilitations");
+			return str;
+	}
+
 
 	@GET
 	@Path("/stamps")
